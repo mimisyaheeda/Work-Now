@@ -94,7 +94,7 @@ public class login extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         //extract the email and send reset link
-                        String mail = resetMail.getText().toString();
+                        String mail = resetMail.getText().toString().trim();
                         fAuth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
