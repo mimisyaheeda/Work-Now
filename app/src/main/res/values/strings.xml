@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SignUp</string>
+    <string name="enter_your_email">Enter Your email</string>
+    <string name="enter_your_password">Enter Your password</string>
+    <string name="don_t_have_an_account">Do not have an account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="create_new_account">Create new account</string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="enter_your_mobile_no">Enter Your Mobile No.</string>
+    <string name="enter_your_address">Enter Your Address</string>
+    <string name="i_agree_to_the_terms_and_conditions">I agree to the Terms and Conditions</string>
+    <string name="register">register</string>
+    <string name="register_here">Register Here</string>
+    <string name="blogin">LOGIN</string>
+</resources>

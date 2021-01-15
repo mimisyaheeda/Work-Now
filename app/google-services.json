@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "872037480018",
+    "project_id": "giventake-73c1e",
+    "storage_bucket": "giventake-73c1e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:872037480018:android:1275f195d9acdacdddd18b",
+        "android_client_info": {
+          "package_name": "mmu.edu.my.signup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "872037480018-v1nmjbtnd5tdmcg8ah1rqko3o2hol94o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqRfH336zMz-ZJI75ONFBW2LM7Myh9uOU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "872037480018-v1nmjbtnd5tdmcg8ah1rqko3o2hol94o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
