@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -35,6 +36,7 @@ public class ListofService extends AppCompatActivity {
     FirebaseFirestore fstore;
     RecyclerView recyclerView;
     FirestoreRecyclerAdapter adapter;
+    ImageView camera;
 
 
     @Override
@@ -50,6 +52,14 @@ public class ListofService extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
         fstore = FirebaseFirestore.getInstance();
         recyclerView = findViewById(R.id.recyclerView);
+        camera = findViewById(R.id.camView);
+
+        camera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+             startActivity(new Intent(getApplicationContext(), CameraActivity.class));
+            }
+        });
 
         Query query = fstore.collection("UserInfo");
 
@@ -71,18 +81,14 @@ public class ListofService extends AppCompatActivity {
                 holder.txtName.setText(model.getName());
                 holder.txtDesc.setText(model.getDescription());
                 holder.txtPhone.setText(model.getNumber());
+                holder.txtLocation.setText(model.getLocation());
+                holder.txtdatetime.setText(model.getDate());
+                holder.txtprice.setText(model.getPrice());
             }
         };
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(adapter);
-
-
-
-
-
-
-
 
         bNewService.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,6 +122,9 @@ public class ListofService extends AppCompatActivity {
         public TextView txtDesc;
         public TextView txtPhone;
         public TextView txtName;
+        public TextView txtLocation;
+        public TextView txtdatetime;
+        public TextView txtprice;
 
         public UserViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -124,6 +133,9 @@ public class ListofService extends AppCompatActivity {
             txtDesc = itemView.findViewById(R.id.list_desc);
             txtPhone = itemView.findViewById(R.id.list_number);
             txtName = itemView.findViewById(R.id.list_name);
+            txtLocation = itemView.findViewById(R.id.list_location);
+            txtdatetime = itemView.findViewById(R.id.list_workinghours);
+            txtprice = itemView.findViewById(R.id.list_price);
         }
 
         public void setTxtTitle(String string){
@@ -138,9 +150,13 @@ public class ListofService extends AppCompatActivity {
             this.txtName = txtName;
         }
 
-        public void setTxtPhone(TextView txtPhone) {
-            this.txtPhone = txtPhone;
-        }
+        public void setTxtPhone(TextView txtPhone) { this.txtPhone = txtPhone;}
+
+        public void setTxtLocation(TextView txtLocation) { this.txtLocation = txtLocation;}
+
+        public void setTxtdatetime(TextView txtdatetime) { this.txtdatetime = txtdatetime;}
+
+        public void setTxtprice(TextView txtprice) { this.txtprice = txtprice;}
     }
 
 

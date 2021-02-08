@@ -48,6 +48,33 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/list_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textColor="@android:color/black"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/list_workinghours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Working Hours"
+            android:textColor="@android:color/black"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/list_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Price per Hour"
+            android:textColor="@android:color/black"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <TextView
             android:id="@+id/list_desc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

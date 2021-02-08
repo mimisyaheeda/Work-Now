@@ -3,6 +3,9 @@
     package="mmu.edu.my.signup">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-feature android:name="android.hardware.Camera"/>
 
     <application
         android:allowBackup="true"
@@ -11,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SignUp">
-        <activity android:name=".CreateService"></activity>
+        <activity android:name=".CameraActivity"></activity>
+        <activity android:name=".CreateService" />
         <activity android:name=".ListofService" />
         <activity android:name=".Register" />
         <activity android:name=".login">
