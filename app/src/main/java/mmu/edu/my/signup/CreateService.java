@@ -63,6 +63,35 @@ public class CreateService extends AppCompatActivity {
                 String date = etDateTime.getText().toString();
                 String price = etSuggestedPrice.getText().toString();
 
+                if (TextUtils.isEmpty(name)) {
+                    etName.setError("Name is required.");
+                    return;
+                }
+                if (TextUtils.isEmpty(number)) {
+                    etNumber.setError("Phone number is required.");
+                    return;
+                }
+                if (TextUtils.isEmpty(location)) {
+                    etLocation.setError("Location is required.");
+                    return;
+                }
+                if (TextUtils.isEmpty(title)) {
+                    etServiceTitle.setError("Service title is required.");
+                    return;
+                }
+                if (TextUtils.isEmpty(desc)) {
+                    etServiceDesc.setError("Service description is required.");
+                    return;
+                }
+                if (TextUtils.isEmpty(date)) {
+                    etDateTime.setError("Date is required.");
+                    return;
+                }
+                if (TextUtils.isEmpty(price)) {
+                    etSuggestedPrice.setError("Price is required.");
+                    return;
+                }
+
                 Map<String, String> data = new HashMap<>();
                 data.put("name", name);
                 data.put("number", number);
@@ -82,7 +111,7 @@ public class CreateService extends AppCompatActivity {
                     public void onFailure(@NonNull Exception e) {
                         String error = e.getMessage();
                         Toast.makeText(CreateService.this, "Error: " + error, Toast.LENGTH_SHORT).show();
-                        
+
                     }
                 });
             }
