@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_4"
+    android:background="@drawable/bg4"
     tools:context=".CreateService">
 
     <LinearLayout
@@ -116,7 +116,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:layout_marginBottom="4dp"
-        android:onClick="create"
         android:background="@color/white"
         android:text="CREATE"
         android:textColor="#fff"
